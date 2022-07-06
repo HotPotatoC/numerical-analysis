@@ -14,7 +14,9 @@ def sign(x: Number):
 
 def bisection(f: Callable, a: Number, b: Number, epsilon=0.01) -> Number:
     """
-    The bisection method is an approximation method to find the roots of the given equation by repeatedly dividing the interval. This method will divide the interval until the resulting interval is found, which is extremely small.
+    The bisection method is an approximation method to find the roots of
+    the given equation by repeatedly dividing the interval. This method will
+    divide the interval until the resulting interval is found, which is extremely small.
     """
     if sign(f(a)) == sign(f(b)):
         raise ValueError("a and b must have different signs")
@@ -31,8 +33,9 @@ def bisection(f: Callable, a: Number, b: Number, epsilon=0.01) -> Number:
 
 def newton_raphson(f: Callable, df: Callable, a: Number, epsilon=0.01) -> Number:
     """
-    Newton-Raphson method is an approximation method to find the roots of the given equation.
-    This method produces successively better approximations to the roots of real-valued equations.
+    Newton-Raphson method is an approximation method to find the roots of
+    the given equation. This method produces successively better approximations
+    to the roots of real-valued equations.
     """
     xn = a - f(a) / df(a)
     if abs(f(xn)) < epsilon:
